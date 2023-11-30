@@ -9,3 +9,8 @@ export const SignupValidation = z.object({
     email: z.string().email(),
     password: z.string().min(4, { message: "Minimum 4 characters required" }),
   });
+
+  export const SigninValidation = z.object({
+    email: z.string().email(),
+    password: z.string().min(4, { message: "Minimum 4 characters required" }),
+  });

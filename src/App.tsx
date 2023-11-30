@@ -44,7 +44,7 @@ const App = () => {
             <Route path="/posts/:id" element={<PostDetails />} />
             <Route path="/profile/:id/*" element={<Profile />} />
             <Route path="/update-profile/:id" element={<UpdateProfile />} />
-            <Route path="/art-gallery" element={<ArtGallery />} />
+            <Route path="/ArtGallery" element={<ArtGallery />} />
           </Route>
         </Routes>
       </ThemeProvider>

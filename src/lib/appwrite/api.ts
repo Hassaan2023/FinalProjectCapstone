@@ -43,7 +43,7 @@ export async function createUserAccount(user: INewUser) {
         appwriteConfig.databaseId,
         appwriteConfig.userCollectionId,
         ID.unique(),
-        user,
+        user
       );
       return newUser;
     } catch (error) {
@@ -82,3 +82,12 @@ export async function createUserAccount(user: INewUser) {
     }
   }
   
+  export async function signOutAccount() {
+    try {
+      const session = await account.deleteSession("current");
+  
+      return session;
+    } catch (error) {
+      console.log(error);
+    }
+  }
